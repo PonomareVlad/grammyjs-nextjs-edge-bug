@@ -1,36 +1,18 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+This repo demonstrates a grammY/nextjs bug.
 
-## Getting Started
+```shell
+grammyjs-nextjs-edge-bug % pnpm build
 
-First, run the development server:
+> grammyjs-nextjs-edge-bug@0.1.0 build /Users/alex/tmp/grammyjs-nextjs-edge-bug
+> next build
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+ ⚠ Compiled with warnings
+
+./app/api/webhooks/telegram/route.ts
+Attempted import error: 'Bot' is not exported from 'grammy' (imported as 'Bot').
+
+Import trace for requested module:
+./app/api/webhooks/telegram/route.ts
+./node_modules/.pnpm/next@13.5.3_react-dom@18.2.0_react@18.2.0/node_modules/next/dist/build/webpack/loaders/next-app-loader.js?name=app%2Fapi%2Fwebhooks%2Ftelegram%2Froute&page=%2Fapi%2Fwebhooks%2Ftelegram%2Froute&pagePath=private-next-app-dir%2Fapi%2Fwebhooks%2Ftelegram%2Froute.ts&appDir=%2FUsers%2Falex%2Ftmp%2Fgrammyjs-nextjs-edge-bug%2Fapp&appPaths=%2Fapi%2Fwebhooks%2Ftelegram%2Froute&pageExtensions=tsx&pageExtensions=ts&pageExtensions=jsx&pageExtensions=js&basePath=&assetPrefix=&nextConfigOutput=&preferredRegion=&middlewareConfig=e30%3D!./app/api/webhooks/telegram/route.ts?__next_edge_ssr_entry__
+
 ```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
