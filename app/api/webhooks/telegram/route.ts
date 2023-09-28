@@ -1,10 +1,8 @@
-import { Bot } from "grammy";
-
 export const runtime = "edge";
 
-const bot = new Bot("123");
-
-export function POST() {
-  console.log(bot);
-  return new Response("OK");
+export async function POST() {
+    const { Bot } = await import("grammy");
+    const bot = new Bot("123");
+    console.log(bot);
+    return new Response("OK");
 }
